@@ -1,0 +1,25 @@
+@BookSeriesApi_HostAddress = https://localhost:7200
+
+GET {{BookSeriesApi_HostAddress}}/api/bookitems
+Accept: application/json
+
+###
+
+POST {{BookSeriesApi_HostAddress}}/api/bookitems
+Content-Type: application/json
+
+{
+  "title": "The Score - A pont",
+  "author": "Elle Kennedy",
+  "seriesName": "Off-Campus #3",
+  "mainCouple": "Allie Hayes & Dean Di Laurentis",
+  "isRead": true,
+  "spiceRating": 5
+}
+
+###
+
+GET {{BookSeriesApi_HostAddress}}/api/bookitems/4
+Accept: application/json
+
+###
