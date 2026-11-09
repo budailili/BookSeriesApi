@@ -1,0 +1,42 @@
+@BookSeriesApi_HostAddress = https://localhost:7134
+
+GET {{BookSeriesApi_HostAddress}}/api/bookitems
+Accept: application/json
+
+###
+
+POST {{BookSeriesApi_HostAddress}}/api/bookitems
+Content-Type: application/json
+
+{
+  "title": "The Score - A pont",
+  "author": "Elle Kennedy",
+  "seriesName": "Off-Campus #3",
+  "mainCouple": "Allie Hayes & Dean Di Laurentis",
+  "isRead": true,
+  "spiceRating": 5
+}
+
+###
+
+GET {{BookSeriesApi_HostAddress}}/api/bookitems/4
+Accept: application/json
+
+###
+
+PUT {{BookSeriesApi_HostAddress}}/api/bookitems/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Twisted Love",
+  "author": "Ana Huang",
+  "seriesName": "Twisted #1",
+  "mainCouple": "Ava Chen & Alex Volkov",
+  "isRead": true,
+  "spiceRating": 5
+}
+
+###
+
+DELETE {{BookSeriesApi_HostAddress}}/api/bookitems/1
